@@ -1,0 +1,5 @@
+currentBranch=`git rev-parse --abbrev-ref HEAD`
+git checkout develop
+git pull origin develop
+git checkout $currentBranch
+git rebase develop

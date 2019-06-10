@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = JulienDeray
+	email = julien@deray.fr
+[pull]
+	rebase = true
+[rebase]
+	autosquash = true
+[sequence]
+	editor = /Users/julienderay/Dev-tools/macos-git-interactive-rebase-tool
+[core]
+	editor = vim
