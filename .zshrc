@@ -115,7 +115,11 @@ function createBranchFromOrigin() {
   if [[ -z "$3" ]]; then
     id=""
   else
-    id="story$3-"
+    if [[ $3 =~ "[A-Z]-[0-9]" ]]; then
+      id="$3-" 
+    else
+      id="story$3-"
+    fi
   fi
   branch=$2/$id$1
   git checkout -b $branch origin/develop || git checkout -b $branch origin/master
