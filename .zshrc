@@ -113,7 +113,7 @@ function lastcommit() {
 
 function createBranchFromOrigin() {
   if [[ -z "$3" ]]; then
-    id=""
+    id="story-125"
   else
     if [[ $3 =~ "[A-Z]-[0-9]" ]]; then
       id="$3-" 
