@@ -153,6 +153,14 @@ function gcdd() {
   git branch -d $oldFeatureBranch
 }
 
+function gcaj() {
+  branch=`git branch --show-current`
+  if [[ $branch =~ "[A-Z]+-[0-9]" ]]; then
+      jira=`echo $branch | grep -e "[A-Z]\+-[0-9]\+" -o`
+      git commit -am "$jira: $1"
+  fi
+}
+
 export HOMEBREW_INSTALL_CLEANUP=true
 function brew_cleanup() {
   brew update
