@@ -191,6 +191,9 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 cd ~/artos
