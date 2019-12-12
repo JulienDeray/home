@@ -196,8 +196,6 @@ alias dcd='docker-compose down'
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-cd ~/artos
-
 export BRANCH_NAME=ju
 
 # Aventus Protocol
