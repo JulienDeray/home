@@ -105,7 +105,7 @@ alias sbtt="sbt test"
 export PATH="$PATH:/Users/julienderay/git-plugins"
 alias glolm="glol master.."
 alias glold="glol develop.."
-alias gcav="gca -m \":bookmark: Bump version\""
+alias gcav="gcaj \":bookmark: bump version\""
 
 function lastcommit() {
   glol | head -1 | awk '{print $2}' | pbcopy
