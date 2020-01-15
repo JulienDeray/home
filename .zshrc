@@ -158,6 +158,8 @@ function gcaj() {
   if [[ $branch =~ "[A-Z]+-[0-9]" ]]; then
       jira=`echo $branch | grep -e "[A-Z]\+-[0-9]\+" -o`
       git commit -am "$jira $1"
+  else
+      git commit -am $1
   fi
 }
 
