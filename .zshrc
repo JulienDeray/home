@@ -113,13 +113,9 @@ function lastcommit() {
 
 function createBranchFromOrigin() {
   if [[ -z "$3" ]]; then
-    id="story-125"
+    id=""
   else
-    if [[ $3 =~ "[A-Z]-[0-9]" ]]; then
-      id="$3-" 
-    else
-      id="story$3-"
-    fi
+    id="$3-" 
   fi
   branch=$2/$id$1
   git checkout -b $branch origin/develop || git checkout -b $branch origin/master
