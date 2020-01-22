@@ -106,6 +106,7 @@ export PATH="$PATH:/Users/julienderay/git-plugins"
 alias glolm="glol master.."
 alias glold="glol develop.."
 alias gcav="gcaj \":bookmark: bump version\""
+alias ggca="gitmoji -c"
 
 function lastcommit() {
   glol | head -1 | awk '{print $2}' | pbcopy
