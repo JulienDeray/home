@@ -113,21 +113,17 @@ function lastcommit() {
 }
 
 function createBranchFromOrigin() {
-  if [[ -z "$3" ]]; then
+  if [[ -z "$2" ]]; then
     id=""
   else
-    id="$3-" 
+    id="$2-" 
   fi
-  branch=$2/$id$1
+  branch=$id$1
   git checkout -b $branch origin/develop || git checkout -b $branch origin/master
 }
 
 function gfeat() {
-  createBranchFromOrigin $1 "feature" $2
-}
-
-function gbugfix() {
-  createBranchFromOrigin $1 "bugfix" $2
+  createBranchFromOrigin $1 $2
 }
 
 function ghotfix() {
