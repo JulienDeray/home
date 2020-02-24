@@ -177,7 +177,10 @@ alias dps='docker ps'
 alias dimg='docker images'
 alias d='docker'
 function docker_rmi_all() {
+  echo "Relax, it's going to take a while..."
   docker rmi $(docker images -q) -f
+  docker rm $(docker ps -q -f 'status=exited')
+  docker rmi $(docker images -q -f "dangling=true")
 }
 
 alias ls='lsd'
