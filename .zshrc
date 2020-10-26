@@ -1,5 +1,7 @@
+ZSH_DISABLE_COMPFIX="true"
+
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/julienderay/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z npm osx brew extract git-flow dirhistory docker docker-compose zsh-nvm)
+plugins=(git z npm osx brew extract git-flow dirhistory docker docker-compose)
 
 # User configuration
 
@@ -68,8 +70,6 @@ if [ -f ~/.private_conf ]; then
 else
     print "404: ~/.private_conf"
 fi
-
-DEFAULT_USER=julienderay
 
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
@@ -102,7 +102,7 @@ alias sbtt="sbt test"
 # GITHUB_AUTH_SECRET
 
 ## Git custom commands
-export PATH="$PATH:/Users/julienderay/git-plugins"
+export PATH="$PATH:$HOME/git-plugins"
 alias glolm="glol master.."
 alias glold="glol develop.."
 alias gcav="gcaj \":bookmark: bump version\""
