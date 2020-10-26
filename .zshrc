@@ -196,48 +196,6 @@ alias dcd='docker-compose down'
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-export BRANCH_NAME=ju
-
-# Aventus Protocol
-# Added private PRIVATE_MNEMONIC
-export NODE_URI='http://localhost:8545'
-export STORAGE_ADDRESS='0xab7f5c0e2da112e6817f631f217d53428a6d57eb'
-export SNS_EVENT_TOPIC='fake-topic'
-export SQS_QUEUE_NAME='fake-queue'
-export MAX_GAS_PRICE=6
-
-# Honest configuration
-export VOTE_CONTRACT_ADDRESS='0xba16ba6288ff62b4e77f7f2ea09c2419e83da6a4'
-
-# Added private Datadog
-# DATADOG_API_KEY
-
-# Gatling IMS
-export GATLING_LOCAL_TEST=true
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-export PATH="/usr/local/opt/node@6/bin:$PATH"
-
-# LogJam
-export ELASTIC_SEARCH_URL="http://localhost:9200"
-export ES_MASTER_INDEX_PREFIX="blockchain-stream"
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/julienderay/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/julienderay/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/julienderay/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/julienderay/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
 # Haskell
 export PATH=$PATH:/Users/julienderay/.local/bin
 
-# Jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-[ -s "/Users/julienderay/.web3j/source.sh" ] && source "/Users/julienderay/.web3j/source.sh"
-
-# Java home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home
