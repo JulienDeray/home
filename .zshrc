@@ -10,7 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="avit"
 ZSH_THEME="agnoster"
 
-DEFAULT_USER=julienderay
+DEFAULT_USER=$USER
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
