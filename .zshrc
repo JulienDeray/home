@@ -169,7 +169,7 @@ function brew_cleanup() {
 }
 
 ## Personal bin folder
-export PATH="$PATH:/Users/julienderay/bin"
+export PATH="$PATH:$HOME/bin"
 
 ## Git custom editor
 export VISUAL="code -w"
@@ -199,5 +199,5 @@ alias dcd='docker-compose down'
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # Haskell
-export PATH=$PATH:/Users/julienderay/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 
