@@ -106,6 +106,7 @@ alias sbtt="sbt test"
 ## Git custom commands
 export PATH="$PATH:$HOME/git-plugins"
 alias glolm="glol master.."
+alias glolmd="glol master_dev.."
 alias glold="glol develop.."
 alias gcav="gcaj \":bookmark: bump version\""
 alias ggca="gitmoji -c"
