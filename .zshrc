@@ -202,3 +202,10 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # Haskell
 export PATH=$PATH:$HOME/.local/bin
 
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper_lazy.sh
