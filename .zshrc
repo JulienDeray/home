@@ -115,14 +115,9 @@ function lastcommit() {
   glol | head -1 | awk '{print $2}' | pbcopy
 }
 
-function createBranchFromOrigin() {
-  if [[ -z "$2" ]]; then
-    id=""
-  else
-    id="$2-" 
-  fi
-  branch=$id$1
-  git checkout -b $branch origin/develop || git checkout -b $branch origin/master
+function createBranchFromOrigin() { 
+  branch="issues/$1/$2"
+  git checkout -b $branch origin/master_dev
 }
 
 function gfeat() {
