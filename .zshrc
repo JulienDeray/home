@@ -110,6 +110,7 @@ alias glolmd="glol master_dev.."
 alias glold="glol develop.."
 alias gcav="gcaj \":bookmark: bump version\""
 alias ggca="gitmoji -c"
+alias gcmd="git checkout master_dev"
 
 function lastcommit() {
   glol | head -1 | awk '{print $2}' | pbcopy
@@ -133,6 +134,13 @@ function gfixup() { git commit -a --fixup `git rev-parse HEAD` }
 function gcmm() {
   oldFeatureBranch=`git branch | grep "*" | sed 's/^\* //'`
   gcm
+  ggl
+  git branch -d $oldFeatureBranch
+}
+
+function gcmmd() {
+  oldFeatureBranch=`git branch | grep "*" | sed 's/^\* //'`
+  gcmd
   ggl
   git branch -d $oldFeatureBranch
 }
