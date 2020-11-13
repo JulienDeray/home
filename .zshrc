@@ -229,3 +229,6 @@ function jar2aws() {
 
 ## Set up sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+## psql
+export PATH=$PATH:/usr/local/Cellar/libpq/13.1/bin
