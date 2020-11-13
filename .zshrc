@@ -219,3 +219,13 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 ssh_test_ec2 () {
 	ssh -i ~/.ssh/aws-test.pem ec2-user@"$1"
 }
+
+## Test artefact publication
+function jar2aws() {
+  APP=${PWD##*/}
+  COMMIT=$(git rev-parse --short=7 HEAD)
+  sbt 'set test in assembly := {}' assembly && aws s3 cp target/scala-2.*/*-$COMMIT.jar s3://dde-artifacts/jars/$APP/ --profile default
+}
+
+## Set up sdkman
+source "$HOME/.sdkman/bin/sdkman-init.sh"
